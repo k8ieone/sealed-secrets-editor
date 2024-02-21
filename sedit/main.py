@@ -43,17 +43,6 @@ def main():
     seal_output = seal(tmpname, args.kubeseal_args)
     overwrite_sealed(filepath, seal_output)
 
-# Flow:
-# 1. Parse the YAML file for all documents
-# 2. Get the secret namespace and name
-# 3. Get the secret from the cluster using kubectl
-# 4. Remove unneeded fields
-# 5. base64 decode stuff in data and move it to stringData
-# 6. Skip decoding binary data - keep in data
-# 7. Open the secret in the system default editor
-# 8. Wait for exit
-# 9. Seal the secret and overwrite the sealed_file
-
 def check_file(filepath):
     # TODO: Could be more sophisticated
     if not filepath.exists() or filepath.is_dir():
