@@ -1,3 +1,20 @@
 [build-system]
 requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = 'sealed-secrets-editor'
+version = '0.0.2'
+description = 'Easily edit sealed-secrets'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = {file = 'LICENSE'}
+authors = [
+	{name = 'Kateřina Medvědová', email = 'k8ie@firemail.cc'},
+]
+dependencies = [
+    "PyYAML"
+]
+
+[project.scripts]
+sedit = "sedit.main:main"
