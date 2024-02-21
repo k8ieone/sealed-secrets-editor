@@ -16,7 +16,9 @@
 
 ## Usage
 
-`sedit sealed-secret.yaml`
+```
+sedit sealed-secret.yaml
+```
 
 Save your edited file afterwards and press enter to seal the new secret.
 
