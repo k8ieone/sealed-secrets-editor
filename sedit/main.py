@@ -87,7 +87,7 @@ def get_secret(name, namespace):
     return data
 
 def clean_unneded_fields(secret):
-    metadata_keys = ["creationTimestamp", "managedFields", "uid", "resourceVersion"]
+    metadata_keys = ["creationTimestamp", "managedFields", "uid", "resourceVersion", "ownerReferences"]
     for key in metadata_keys:
         if key in secret["metadata"].keys():
             secret["metadata"].pop(key)
