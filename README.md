@@ -1,5 +1,9 @@
 # sealed-secrets-editor
 
+> [!NOTE]  
+> Despine not seeing any development, the code in this project still works and is being actively used by me.
+> If stuff breaks, I am very likely to fix it.
+
 **Problem:** "Editing sealed-secrets is difficult. I need to go to the cluster, get the current version of the secret, base64-decode it, paste it into my editor, make changes and seal it again."
 
 **Solution:** Use `sedit`! This ~150 LoC script does exactly the above mentioned flow automatically.
